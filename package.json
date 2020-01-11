@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Devimal/typescript-decorators/issues"
   },
-  "homepage": "https://github.com/Devimal/typescript-decorators#readme"
+  "homepage": "https://github.com/Devimal/typescript-decorators#readme",
+  "devDependencies": {
+    "typescript": "^3.7.4"
+  }
 }
