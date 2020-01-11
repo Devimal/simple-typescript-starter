@@ -4,8 +4,11 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build": "npx tsc",
-        "start": "node dist/main.js"
+        "build": "tsc",
+        "watch-src": "tsc --watch",
+        "watch-dist": "nodemon -q --watch dist dist/main.js",
+        "start": "node dist/main.js",
+        "start:dev": "concurrently --kill-others --names \"compile,run\" --prefix \"[{time}] {name}:\" --prefix-colors \"gray,cyan\" \"npm:watch-src\" \"npm:watch-dist\""
     },
     "repository": {
         "type": "git",
@@ -19,6 +22,8 @@
     },
     "homepage": "https://github.com/Devimal/typescript-decorators#readme",
     "devDependencies": {
+        "concurrently": "^5.0.2",
+        "nodemon": "^2.0.2",
         "typescript": "^3.7.4"
     }
 }
