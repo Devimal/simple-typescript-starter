@@ -1,23 +1,24 @@
 {
-  "name": "typescript-starter",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Devimal/typescript-decorators.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Devimal/typescript-decorators/issues"
-  },
-  "homepage": "https://github.com/Devimal/typescript-decorators#readme",
-  "devDependencies": {
-    "typescript": "^3.7.4"
-  }
+    "name": "typescript-starter",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "npx tsc",
+        "start": "node dist/main.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Devimal/typescript-decorators.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Devimal/typescript-decorators/issues"
+    },
+    "homepage": "https://github.com/Devimal/typescript-decorators#readme",
+    "devDependencies": {
+        "typescript": "^3.7.4"
+    }
 }
