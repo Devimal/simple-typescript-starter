@@ -10,7 +10,11 @@
         "watch-debug": "nodemon --inspect-brk -q --watch dist dist/main.js",
         "start": "node dist/main.js",
         "start:dev": "concurrently --kill-others --names \"compile,run\" --prefix \"[{time}] {name}:\" --prefix-colors \"gray,cyan\" \"npm:watch-src\" \"npm:watch-dist\"",
-        "start:debug": "concurrently --kill-others --kill-others-on-fail --names \"compile,run\" --prefix \"[{time}] {name}:\" --prefix-colors \"gray,cyan\" \"npm:watch-src\" \"npm:watch-debug\""
+        "start:debug": "concurrently --kill-others --kill-others-on-fail --names \"compile,run\" --prefix \"[{time}] {name}:\" --prefix-colors \"gray,cyan\" \"npm:watch-src\" \"npm:watch-debug\"",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:cov": "jest --coverage",
+        "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand"
     },
     "repository": {
         "type": "git",
@@ -24,8 +28,13 @@
     },
     "homepage": "https://github.com/Devimal/typescript-decorators#readme",
     "devDependencies": {
+        "@types/jest": "^24.0.25",
         "concurrently": "^5.0.2",
+        "jest": "^24.9.0",
         "nodemon": "^2.0.2",
+        "ts-jest": "^24.3.0",
+        "ts-node": "^8.6.1",
+        "tsconfig-paths": "^3.9.0",
         "typescript": "^3.7.4"
     }
 }
