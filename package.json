@@ -7,14 +7,14 @@
         "build": "tsc",
         "watch-src": "tsc --watch",
         "watch-dist": "nodemon -q --watch dist dist/main.js",
-        "watch-debug": "nodemon --inspect-brk -q --watch dist dist/main.js",
+        "watch-debug": "nodemon --inspect -q --watch dist dist/main.js",
         "start": "node dist/main.js",
         "start:dev": "concurrently --kill-others --names \"compile,run\" --prefix \"[{time}] {name}:\" --prefix-colors \"gray,cyan\" \"npm:watch-src\" \"npm:watch-dist\"",
         "start:debug": "concurrently --kill-others --kill-others-on-fail --names \"compile,run\" --prefix \"[{time}] {name}:\" --prefix-colors \"gray,cyan\" \"npm:watch-src\" \"npm:watch-debug\"",
         "test": "jest",
         "test:watch": "jest --watch",
         "test:cov": "jest --coverage",
-        "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand"
+        "test:debug": "node --inspect -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand"
     },
     "repository": {
         "type": "git",
